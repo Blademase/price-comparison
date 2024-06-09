@@ -1,0 +1,74 @@
+import { Component, OnInit } from '@angular/core';
+import { QuoteService } from './quote.service';
+// import { SwiperOptions } from 'swiper/types';
+type SliderTypes = {
+  url: string;
+  description: string;
+};
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+})
+export class HomeComponent implements OnInit {
+  stores: string[] = ['Глобус', 'Народный', 'Сулпак', 'Азия', 'Гульжамал'];
+  allStores: string[] = this.stores;
+  filteredStores: string[] = this.stores;
+  store: string[] =[] ;
+  category: string = '';
+  categories: string[] = ['Электротехника', 'Телефон', 'Компьютер', 'Красота и здоровье', 'Спорт и фитнес'];
+  filteredCategories: string[] = this.categories;
+
+  items: any[] = [
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Электротехника",storeOfItem:["Сулпак","Народный"]', price: '45000 сом', discount: '20',categoryOfItem:"Электротехника",storeOfItem:["Сулпак","Народный"]},
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: ':"Электротехника",storeOfItem:["Азия","Народный"]', price: '20000 сом', discount: '50',categoryOfItem:"Электротехника",storeOfItem:["Азия","Народный"]},
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: ':"Электротехника",storeOfItem:["Гульжамал","Азия"]', price: '60000 сом', discount: '',categoryOfItem:"Электротехника",storeOfItem:["Гульжамал","Азия"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: ':"Электротехника",storeOfItem:["Сулпак","Народный"]', price: '45000 сом', discount: '',categoryOfItem:"Электротехника",storeOfItem:["Сулпак","Народный"]},
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Красота и здоровье",storeOfItem:["Сулпак","Гульжамал', price: '20000 сом', discount: '70',categoryOfItem:"Красота и здоровье",storeOfItem:["Сулпак","Гульжамал"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Красота и здоровье",storeOfItem:["Глобус","Народный"', price: '60000 сом', discount: '',categoryOfItem:"Красота и здоровье",storeOfItem:["Глобус","Народный"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Красота и здоровье",storeOfItem:["Сулпак","Глобус"] ', price: '45000 сом', discount: '20',categoryOfItem:"Красота и здоровье",storeOfItem:["Сулпак","Глобус"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Спорт и фитнес",storeOfItem:["Сулпак","Народный"]', price: '20000 сом', discount: '50',categoryOfItem:"Спорт и фитнес",storeOfItem:["Сулпак","Народный"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Спорт и фитнес",storeOfItem:["Сулпак","Глобус"]},', price: '60000 сом', discount: '',categoryOfItem:"Спорт и фитнес",storeOfItem:["Сулпак","Глобус"]},
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Спорт и фитнес",storeOfItem:["Гульжамал","Народны', price: '45000 сом', discount: '20',categoryOfItem:"Спорт и фитнес",storeOfItem:["Гульжамал","Народный"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Спорт и фитнес",storeOfItem:["Азия","Народный"] }', price: '20000 сом', discount: '50',categoryOfItem:"Спорт и фитнес",storeOfItem:["Азия","Народный"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'categoryOfItem:"Спорт и фитнес",storeOfItem:["Сулпак","Азия"] },', price: '60000 сом', discount: '',categoryOfItem:"Спорт и фитнес",storeOfItem:["Сулпак","Азия"] },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'Ноутбук', price: '45000 сом', discount: '' },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'Телефон', price: '20000 сом', discount: '70' },
+    { imageUrl: '../../../assets/ngx-rocket-logo.png', title: 'Компьютер', price: '60000 сом', discount: '' },
+  ];
+  filteredItems = this.items;
+  constructor(private quoteService: QuoteService) {}
+
+  filterCategories() {
+    this.filteredCategories = this.categories;
+  }
+
+  filterStores(category: string) {
+    if (category === 'Электротехника') {
+      this.filteredStores = this.allStores.filter((store) => store === 'Гульжамал' || store === 'Сулпак');
+    } else {
+      this.filteredStores = this.allStores;
+    }
+  }
+  filterCategory(store: string) {
+    if (store === 'Народный') {
+      this.filteredCategories = ['Продукты питания', 'Предметы первой необходимости'];
+    } else {
+      this.filterCategories();
+    }
+  }
+
+  selectStore(store: string) {
+    this.filteredItems = this.items.filter((item) => {
+      return item.storeOfItem && item.storeOfItem.includes(store);
+    });
+  }
+
+  selectCategory(category: string) {
+    this.filteredItems = this.items.filter((item) => item.categoryOfItem === category);
+  }
+
+  ngOnInit() {
+    this.filterCategories();
+  }
+}

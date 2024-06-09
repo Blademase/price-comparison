@@ -1,0 +1,51 @@
+#NavBar a {
+  text-decoration: none;
+  color: black;
+}
+#mainMenu{
+  display: flex;
+  width: 25vw;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+#mainMenu:hover{
+  background-color: white;
+}
+#NavBar {
+  display: flex;
+  gap: 3px;
+  height: 40px;
+  background-color: whitesmoke;
+  align-items: center;
+}
+#SearchBar {
+  position: relative;
+  width: 50vw;
+}
+#SearchBar svg {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: #888;
+}
+#SearchBar input {
+  display: flex;
+  width: 50vw;
+  height: 30px;
+  border: none;
+  padding-left: 1vw;
+  background-color: white;
+  outline-color: #888888;
+}
+#SearchBar input::placeholder {
+  color: rgba(161, 161, 161, 0.68);
+}
+#logo img{
+  width: 50px;
+  height: 40px;
+}
+// fds

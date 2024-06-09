@@ -1,0 +1,38 @@
+.ReviewCardCirlce {
+  width: 80px;
+  height: 80px;
+  // border: 40px solid red;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, green 70%, green 70%, red 30%, red 30%);
+}
+#rewievCardBackground {
+  display: flex;
+  justify-content: center;
+}
+#rewievCard {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  gap: 10vw;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: aqua;
+}
+#rewievCard img {
+  width: 200px;
+  height: 200px;
+}
+.rewievCardRewiev {
+  display: flex;
+}
+#ReviewCardStar {
+  display: flex;
+  position: relative;
+}
+#ReviewCardStar svg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

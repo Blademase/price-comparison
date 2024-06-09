@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+#RandomCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  width: 95%;
+}
+#randomCardsRlc{
+  display: flex;
+  justify-content: center;
+}
+#Card {
+  height: 300px;
+  width: 31vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-top: 10px;
+  background-color: white;
+  justify-content: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px; /* ваш паддинг */
+  border: 1px solid #ccc; /* пример рамки для наглядности */
+}
+#Card:hover{
+  background-color: #888888;
+  border-radius: 10px;
+  color: white;
+}
+.CardImgRlc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  //border-radius: 5px;
+  padding-bottom: 5px;
+  //border-bottom: black 1px solid;
+}
+.cardDescription span,
+.cardPrice span{
+  display: flex;
+  gap: 5px;
+  padding-left: 5px;
+  font-family: "Book Antiqua";
+  font-weight: 600;
+}
+
+.CardImg {
+  width: 30%;
+}
+.DiscountPrice {
+  display: flex;
+  gap: 0.5vw;
+}
+.Discount {
+  color: green;
+}
+
+#category,#stores {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+#category button,
+#stores button {
+  outline-color: #888888;
+  border: 1px solid white;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+#category button:hover,
+#stores button:hover {
+  background-color: white;
+  color: rgb(199, 199, 199);
+}
+#category button.selected {
+  background-color: white;
+}
+
+#stores button.selected {
+  background-color: white;
+}

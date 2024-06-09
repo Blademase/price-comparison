@@ -1,0 +1,33 @@
+.CardImgRlc {
+  display: flex; /* Разместить элементы внутри блока в строку */
+  flex-direction: column;
+  justify-content: center; /* Выравнивание по горизонтали */
+  align-items: center; /* Выравнивание по вертикали */
+}
+#Card {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: antiquewhite;
+  justify-content: center;
+}
+.cardDescription,
+.cardPrice {
+  display: flex;
+  gap: 5px;
+  padding-left: 5px;
+}
+.CardImg {
+  width: 30%;
+}
+.DiscountPrice {
+  display: flex;
+  gap: 0.5vw;
+}
+.Discount {
+  color: green;
+}

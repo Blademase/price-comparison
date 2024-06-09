@@ -1,0 +1,151 @@
+<div class="slides">
+  <div class="slide" style="background-image: url('{{ slides[currentSlide].url }}')">
+    <p>{{ slides[currentSlide].description }}</p>
+    <button id="SlidePreviousButton" (click)="previous()">
+      <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="rotate(180, 38, 38)">
+          <g filter="url(#filter0_d_320_324)">
+            <circle cx="38" cy="37" r="18" fill="white" />
+          </g>
+          <g clip-path="url(#clip0_320_324)">
+            <path
+              d="M39.8876 37L35.2563 41.5368C34.9146 41.8715 34.9146 42.4142 35.2563 42.7489C35.598 43.0837 36.152 43.0837 36.4937 42.7489L41.7437 37.6061C42.0854 37.2714 42.0854 36.7286 41.7437 36.3939L36.4937 31.2511C36.152 30.9163 35.598 30.9163 35.2563 31.2511C34.9146 31.5858 34.9146 32.1285 35.2563 32.4632L39.8876 37Z"
+              fill="black"
+            />
+          </g>
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_320_324"
+            x="0"
+            y="0"
+            width="76"
+            height="76"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dy="1" />
+            <feGaussianBlur stdDeviation="10" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_320_324" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_320_324" result="shape" />
+          </filter>
+          <clipPath id="clip0_320_324">
+            <rect width="7" height="12" fill="white" transform="translate(35 31)" />
+          </clipPath>
+        </defs>
+      </svg>
+    </button>
+    <button id="SlideNextButton" (click)="next()">
+      <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_320_324)">
+          <circle cx="38" cy="37" r="18" fill="white" />
+        </g>
+        <g clip-path="url(#clip0_320_324)">
+          <path
+            d="M39.8876 37L35.2563 41.5368C34.9146 41.8715 34.9146 42.4142 35.2563 42.7489C35.598 43.0837 36.152 43.0837 36.4937 42.7489L41.7437 37.6061C42.0854 37.2714 42.0854 36.7286 41.7437 36.3939L36.4937 31.2511C36.152 30.9163 35.598 30.9163 35.2563 31.2511C34.9146 31.5858 34.9146 32.1285 35.2563 32.4632L39.8876 37Z"
+            fill="black"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_320_324"
+            x="0"
+            y="0"
+            width="76"
+            height="76"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feOffset dy="1" />
+            <feGaussianBlur stdDeviation="10" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_320_324" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_320_324" result="shape" />
+          </filter>
+          <clipPath id="clip0_320_324">
+            <rect width="7" height="12" fill="white" transform="translate(35 31)" />
+          </clipPath>
+        </defs>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div [style.display]="currentSlide > 0 ? 'none' : 'flex'">
+  <div id="MainTextRlc">
+    <span id="MainText">Наша история</span>
+  </div>
+  <div id="RlcMain">
+    <div id="Circles">
+      <div>
+        <div id="Rlc">
+          <div id="Circle">
+            <div>2015</div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+        </div>
+      </div>
+
+      <div>
+        <div id="Rlc">
+          <div id="Circle">
+            <div>2016</div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+        </div>
+      </div>
+
+      <div>
+        <div id="Rlc">
+          <div id="Circle">
+            <div>2017</div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+        </div>
+      </div>
+
+      <div>
+        <div id="Rlc">
+          <div id="Circle">
+            <div>2018</div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+        </div>
+      </div>
+
+      <div>
+        <div id="Rlc">
+          <div id="Circle">
+            <div>2019</div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+        </div>
+      </div>
+
+      <div>
+        <div id="Rlc">
+          <div id="Circle">
+            <div>2020</div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit</p>
+        </div>
+      </div>
+    </div>
+    <div id="RlcMinor"></div>
+  </div>
+</div>

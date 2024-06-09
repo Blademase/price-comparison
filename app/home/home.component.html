@@ -1,0 +1,31 @@
+
+  <div id="category">
+    <button *ngFor="let category of categories" (click)="selectCategory(category)"  [class.selected]="category === selectedCategory">
+      {{ category }}
+    </button>
+  </div>
+  <div id="stores">
+    <button *ngFor="let store of stores" (click)="selectStore(store)"  [class.selected]="store === selectedStore">
+      {{ store }}
+    </button>
+  </div>
+  <div id="randomCardsRlc">
+  <div id="RandomCards">
+    <div id="Card" *ngFor="let item of filteredItems" (click)="viewCardDetails(item)" >
+      <div class="CardImgRlc">
+        <img class="CardImg" [src]="item.imageUrl" alt="" />
+      </div>
+      <div class="cardDescription">
+        <span> Описание:</span>
+        {{ item.title }}
+      </div>
+      <div class="cardPrice">
+        <span> Цена:</span>
+        <div class="DiscountPrice">
+          <span>{{ item.price }}</span>
+          <span class="Discount" *ngIf="item.discount">-{{ item.discount }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

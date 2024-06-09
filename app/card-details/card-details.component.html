@@ -1,0 +1,63 @@
+<div >
+  <p class="titleOfItem">{{ selectedCard.title }}</p>
+  <div class="cardBody">
+  <img [src]="selectedCard.imageUrl" alt="{{ selectedCard.title }}">
+  <div class="cardPriceRating">
+    <div>
+  <p class="descriptionOfItem">Описание: {{ selectedCard.description }}</p>
+  <p class="priceOfItem">Цена: {{ selectedCard.price }}</p>
+  <p class="availableStores">Товар доступен в: {{selectedCard.storeOfItem}}</p>
+</div>
+
+  <div class="rating rating-lg rating-half">
+    <input [checked]="selectedCard.rating >= 0.0" (click)="updateRating(0)" type="radio" name="rating-10" class="rating-hidden" />
+    <input [checked]="selectedCard.rating >= 0.5" (click)="updateRating(0.5)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-1" />
+    <input [checked]="selectedCard.rating >= 1.0" (click)="updateRating(1.0)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-2" />
+    <input [checked]="selectedCard.rating >= 1.5" (click)="updateRating(1.5)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-1" >
+    <input [checked]="selectedCard.rating >= 2.0" (click)="updateRating(2.0)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-2" />
+    <input [checked]="selectedCard.rating >= 2.5" (click)="updateRating(2.5)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-1" />
+    <input [checked]="selectedCard.rating >= 3.0" (click)="updateRating(3.0)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-2" />
+    <input [checked]="selectedCard.rating >= 3.5" (click)="updateRating(3.5)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-1" />
+    <input [checked]="selectedCard.rating >= 4.0" (click)="updateRating(4.0)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-2" />
+    <input [checked]="selectedCard.rating >= 4.5" (click)="updateRating(4.5)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-1" />
+    <input  [checked]="selectedCard.rating >= 5.0" (click)="updateRating(5.0)" type="radio" name="rating-10" class="bg-black mask mask-star-2 mask-half-2" />
+  </div>
+</div>
+</div>
+  <div class="flex items-center mb-2">
+  <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">5 star</a>
+  <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+    <div class="h-5 bg-yellow-300 rounded" style="width:{{ selectedCard.rating * 20 }}%"></div>
+  </div>
+  <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ selectedCard.rating * 20 }}%</span>
+</div>
+<div class="flex items-center mt-4">
+  <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">4 star</a>
+  <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+    <div class="h-5 bg-yellow-300 rounded" style="width: {{ selectedCard.rating * 20 * 0.8 }}%"></div>
+  </div>
+  <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ selectedCard.rating * 20 * 0.8 }}%</span>
+</div>
+<div class="flex items-center mt-4">
+  <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">3 star</a>
+  <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+    <div class="h-5 bg-yellow-300 rounded" style="width: {{ selectedCard.rating * 20 * 0.6 }}%"></div>
+  </div>
+  <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ selectedCard.rating * 20 * 0.6 }}%</span>
+</div>
+<div class="flex items-center mt-4">
+  <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">2 star</a>
+  <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+    <div class="h-5 bg-yellow-300 rounded" style="width: {{ selectedCard.rating * 20 * 0.4 }}%"></div>
+  </div>
+  <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ selectedCard.rating * 20 * 0.4 }}%</span>
+</div>
+<div class="flex items-center mt-4">
+  <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">1 star</a>
+  <div class="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+    <div class="h-5 bg-yellow-300 rounded" style="width: {{ selectedCard.rating * 20 * 0.2 }}%"></div>
+  </div>
+  <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{{ selectedCard.rating * 20 * 0.2 }}%</span>
+</div>
+
+<div class="back"></div>

@@ -1,0 +1,18 @@
+<div id="Card">
+  <div class="CardImgRlc">
+    <img class="CardImg" [src]="imageUrl" alt="" />
+  </div>
+  <div class="cardDescription">
+    <span> Описание:</span>
+    {{ title }}
+  </div>
+  <div class="cardPrice">
+    <span> Цена:</span>
+    <div class="DiscountPrice">
+      <span>{{ price }}</span>
+      <span class="Discount" *ngIf="discount">-{{ discount }}%</span>
+    </div>
+  </div>
+
+  <div *ngIf="condition">Этот элемент будет отображаться только если condition равно true.</div>
+</div>
